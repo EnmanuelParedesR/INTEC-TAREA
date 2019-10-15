@@ -4,13 +4,6 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--[if IE 8]>
-        <link rel="stylesheet" href="/Content/ie8.css">
-    <![endif]-->
-
-    <!--[if lte IE 7]>
-        <link rel="stylesheet" href="/Content/ie7.css">
-    <![endif]-->
 
     <title>Volante Publicación de Medio Término</title>
     <meta http-equiv="X-UA-Compatible" content="IE=9">
@@ -23,35 +16,386 @@
     <link rel="stylesheet" href="./volante_files/responsive.css">
     <link rel="stylesheet" href="./volante_files/datepicker.min.css">
     <link rel="stylesheet" href="./volante_files/owl.carousel.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+
 
     <script type="text/javascript">
-        function blinkeffect(selector) {
-            $(selector).fadeOut('slow', function () {
-                $(this).fadeIn('slow', function () {
-                    blinkeffect(this);
-                });
-            });
-        }
 
-        function showReporte(){
+
+        var registroNotas = [
+
+            {
+                periodo: "3",
+                periodoLetra: "AGOSTO - OCTUBRE",
+                materias: [{
+
+                    Clave: "ASL311",
+                    Seccion: "02",
+                    Titulo: "LABORATORIO PATOLOGIA PEDIATRICA INFECCIOSA",
+                    Profesora: "DANIA MERCEDES TORRES ALMANZAR",
+                    Creditos: "4",
+                    LunesH: "",
+                    MartesH: "",
+                    MiercH: "8/12",
+                    JuevH: "",
+                    ViernH: "",
+                    Sab: "",
+                    Aula: "MV51",
+                    Letra: "B+",
+                    Nota: "89"
+                },
+
+                {
+
+                    Clave: "ASL315",
+                    Seccion: "05",
+                    Titulo: "LABORATORIO PATOLOGIA QUIRURGICA II",
+                    Profesora: "VICENTE CALCAÑO UCETA",
+                    Creditos: "4",
+                    LunesH: "16/18",
+                    MartesH: "",
+                    MiercH: "16/18",
+                    JuevH: "",
+                    ViernH: "",
+                    Sab: "",
+                    Aula: "SBG",
+                    Letra: "B+",
+                    Nota: "88"
+                },
+
+                {
+
+                    Clave: "ASM311",
+                    Seccion: "02",
+                    Titulo: "PATOLOGIA PEDIATRICA INFECCIOSA",
+                    Profesora: "DANIA MERCEDES TORRES ALMANZAR",
+                    Creditos: "2",
+                    LunesH: "",
+                    MartesH: "",
+                    MiercH: "14/16",
+                    JuevH: "",
+                    ViernH: "",
+                    Sab: "",
+                    Aula: "AH408",
+                    Letra: "C",
+                    Nota: "72"
+                },
+
+                {
+
+                    Clave: "ASM315",
+                    Seccion: "01",
+                    Titulo: "PATOLOGIA QUIRURGICA II",
+                    Profesora: "JOSE GREGORIO HERNANDEZ GOMEZ",
+                    Creditos: "4",
+                    LunesH: "18/20",
+                    MartesH: "",
+                    MiercH: "",
+                    JuevH: "",
+                    ViernH: "",
+                    Sab: "",
+                    Aula: "AH314, AH414",
+                    Letra: "B+",
+                    Nota: "89"
+                },
+
+                {
+
+                    Clave: "ASM318",
+                    Seccion: "01",
+                    Titulo: "PATOLOGIA GINECOBSTETRICA",
+                    Profesora: "CARLOS JOSE REGALADO CASTELLANO",
+                    Creditos: "2",
+                    LunesH: "14/16",
+                    MartesH: "",
+                    MiercH: "",
+                    JuevH: "",
+                    ViernH: "",
+                    Sab: "",
+                    Aula: "AH314, AH414",
+                    Letra: "A",
+                    Nota: "92"
+                },
+
+
+                ]
+            },
+
+            {
+                periodo: "2",
+                periodoLetra: "ABRIL - JULIO",
+                materias: [
+
+
+                    {
+
+                        Clave: "ASL329",
+                        Seccion: "02",
+                        Titulo: "LABORATORIO CARDIOLOGIA",
+                        Profesora: "JOSE JOAQUIN MARTINEZ ALMONTE ",
+                        Creditos: "2",
+                        LunesH: "",
+                        MartesH: "08/12",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "SBG1",
+                        Letra: "A",
+                        Nota: "98"
+                    },
+
+                    {
+
+                        Clave: "ASL328",
+                        Seccion: "02",
+                        Titulo: "LABORATORIO UROLOGIA",
+                        Profesora: "SANTO BIENVENIDO SANTANA DE LOS SANTOS ",
+                        Creditos: "1",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "07/09",
+                        JuevH: "",
+                        ViernH: "10/12",
+                        Sab: "",
+                        Aula: "PONAC",
+                        Letra: "A",
+                        Nota: "97"
+                    },
+
+                    {
+
+                        Clave: "ASL330",
+                        Seccion: "04",
+                        Titulo: "LABORATORIO OTORRINOLARINGOLOGIA",
+                        Profesora: "LISSETE CHEAS BIDO ",
+                        Creditos: "1",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "10/12",
+                        Sab: "",
+                        Aula: "SBG1",
+                        Letra: "A",
+                        Nota: "97"
+                    },
+
+                    {
+
+                        Clave: "ASL331",
+                        Seccion: "01",
+                        Titulo: "LABORATORIO OFTALMOLOGIA",
+                        Profesora: "ROSA KATHERINE RIVERA GRULLON",
+                        Creditos: "1",
+                        LunesH: "10/12",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "INDEN",
+                        Letra: "A",
+                        Nota: "100"
+                    },
+
+                    {
+
+                        Clave: "ASL333",
+                        Seccion: "01",
+                        Titulo: "LABORATORIO ENDROCRINOLOGIA",
+                        Profesora: "JANY ELIZABETH MATEO ROSADO",
+                        Creditos: "2",
+                        LunesH: "",
+                        MartesH: "14/16",
+                        MiercH: "",
+                        JuevH: "14/16",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "SBG1",
+                        Letra: "A",
+                        Nota: "91"
+                    },
+                    {
+
+                        Clave: "ASL312",
+                        Seccion: "09",
+                        Titulo: "LABORATORIO DE PERINATOLOGIA",
+                        Profesora: "PEDRO ANTONIO MARTE CRUZ",
+                        Creditos: "2",
+                        LunesH: "20/22",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH314",
+                        Letra: "A",
+                        Nota: "93"
+                    },
+
+
+                    {
+
+                        Clave: "ASM324",
+                        Seccion: "01",
+                        Titulo: "GASTROENTOLOGIA",
+                        Profesora: "JULIO EMILIO CAMARENA TRABOUS",
+                        Creditos: "3",
+                        LunesH: "",
+                        MartesH: "12/14",
+                        MiercH: "",
+                        JuevH: "12/14",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH412",
+                        Letra: "C+",
+                        Nota: "75"
+                    },
+
+
+                    {
+
+                        Clave: "ASM330",
+                        Seccion: "01",
+                        Titulo: "OTORRINOLARINGOLOGIA",
+                        Profesora: "AGUSTO ANTONIO OLIVO DE LA CRUZ",
+                        Creditos: "2",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "07/09",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH414",
+                        Letra: "C+",
+                        Nota: "77"
+                    },
+
+
+                    {
+
+                        Clave: "ASM328",
+                        Seccion: "01",
+                        Titulo: "UROLOGIA",
+                        Profesora: "CLAUDIO ROBERTO ESPINOSA MARTINEZ",
+                        Creditos: "3",
+                        LunesH: "14/16",
+                        MartesH: "",
+                        MiercH: "14/16",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: " AH412",
+                        Letra: "A",
+                        Nota: "91"
+                    },
+
+
+                    {
+
+                        Clave: "ASM329",
+                        Seccion: "01",
+                        Titulo: "CARDIOLOGIA",
+                        Profesora: "WILSON RAFAEL JAVIERRE JOSE",
+                        Creditos: "3",
+                        LunesH: "",
+                        MartesH: "16/18",
+                        MiercH: "",
+                        JuevH: "16/18",
+                        ViernH: "",
+                        Sab: "09/11",
+                        Aula: "AH414",
+                        Letra: "A",
+                        Nota: "93"
+                    },
+
+
+                    {
+
+                        Clave: "ASM312",
+                        Seccion: "01",
+                        Titulo: "PERINATOLOGIA",
+                        Profesora: "PEDRO ANTONIO MARTE CRUZ",
+                        Creditos: "2",
+                        LunesH: "14/16",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH314",
+                        Letra: "A",
+                        Nota: "93"
+                    },
+
+
+                    //
+                    {
+
+                        Clave: "ASM331",
+                        Seccion: "01",
+                        Titulo: "OFTALMOLOGIA",
+                        Profesora: "ROSA KATHERINE RIVERA GRULLON",
+                        Creditos: "2",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "12/14",
+                        JuevH: "",
+                        ViernH: "12/14",
+                        Sab: "",
+                        Aula: "AH414",
+                        Letra: "B+",
+                        Nota: "86"
+                    },
+
+                    {
+
+                        Clave: "ASM333",
+                        Seccion: "01",
+                        Titulo: "ENDROCRINOLOGIA",
+                        Profesora: "RADYVELKA ALTAGRACIA THEN VANDERHORST",
+                        Creditos: "3",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "07/09",
+                        Sab: "07/09",
+                        Aula: "AH414",
+                        Letra: "B+",
+                        Nota: "88"
+                    },
+
+                ]
+            }
+        ]
+
+        function showReporte() {
+
+            var periodoSelected = $('#ddlPeriodo')[0].value;
+            var dataSelected = registroNotas.find(function (_notas) { return _notas.periodo === periodoSelected; });
+
+            $('#table').bootstrapTable('destroy');
+
+
+            if (dataSelected)
+                $('#table').bootstrapTable({
+                    data: dataSelected.materias
+                });
+
+            $('.fixed-table-loading').css("display", "none");
             $('#report-content').css("display", "block");
         }
+
+
     </script>
 
 
 
-
-    <script type="text/javascript">
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-32068627-4', 'auto');
-        ga('send', 'pageview');
-    </script>
 </head>
 
 <body style="">
@@ -70,11 +414,12 @@
                 <h1 class="section-title color-white uk-hidden-small">Opciones</h1>
                 <ul class="menu uk-nav uk-nav-parent-icon">
 
-                    <li><a id="opInicio" class="uk-icon-home" href="./inicio.html"><span class="uk-hidden-small">Inicio</span></a>
+                    <li><a id="opInicio" class="uk-icon-home" href="./inicio.html"><span
+                                class="uk-hidden-small">Inicio</span></a>
                     </li>
                     <li id="opProcesosAcademicos" class="menu-slider" data-submenu="procesos-menu">
                         <a class="uk-icon-edit" href="./volante.html">
-                            <span class="uk-hidden-small">Volante de Selección</span>
+                            <span class="uk-hidden-small">Volante de Calificación</span>
                             <span class="uk-icon-chevron-right uk-float-right"></span>
                         </a>
                     </li>
@@ -89,13 +434,11 @@
                 <div class="topbar">
                     <div>
                         <div class="toogle-menu">
-                            <a href="#"
-                                class="top-icon uk-icon-cog"></a>
+                            <a href="#" class="top-icon uk-icon-cog"></a>
                             <ul>
-                                <li class="uk-icon-user"><a href="#"
-                                        class="black-font">Información Personal</a></li>
-                                <li class="uk-icon-lock"><a href="./login.html"
-                                        class="black-font">Cerrar Sesión</a></li>
+                                <li class="uk-icon-user"><a href="#" class="black-font">Información Personal</a></li>
+                                <li class="uk-icon-lock"><a href="./login.html" class="black-font">Cerrar Sesión</a>
+                                </li>
                             </ul>
                         </div>
                         <span class="aligh-right color-white">ESTEPHANY HERRERA OGANDO</span>
@@ -111,70 +454,24 @@
                             <span>Año</span>
                             <select id="ddlAno" name="ano">
                                 <option>2019</option>
-                                <option>2018</option>
-                                <option>2017</option>
-                                <option>2016</option>
-                                <option>2015</option>
-                                <option>2014</option>
-                                <option>2013</option>
-                                <option>2012</option>
-                                <option>2011</option>
-                                <option>2010</option>
-                                <option>2009</option>
-                                <option>2008</option>
-                                <option>2007</option>
-                                <option>2006</option>
-                                <option>2005</option>
-                                <option>2004</option>
-                                <option>2003</option>
-                                <option>2002</option>
-                                <option>2001</option>
-                                <option>2000</option>
-                                <option>1999</option>
-                                <option>1998</option>
-                                <option>1997</option>
-                                <option>1996</option>
-                                <option>1995</option>
-                                <option>1994</option>
-                                <option>1993</option>
-                                <option>1992</option>
-                                <option>1991</option>
-                                <option>1990</option>
-                                <option>1989</option>
-                                <option>1988</option>
-                                <option>1987</option>
-                                <option>1986</option>
-                                <option>1985</option>
-                                <option>1984</option>
-                                <option>1983</option>
-                                <option>1982</option>
-                                <option>1981</option>
-                                <option>1980</option>
-                                <option>1979</option>
-                                <option>1978</option>
-                                <option>1977</option>
-                                <option>1976</option>
-                                <option>1975</option>
-                                <option>1974</option>
-                                <option>1973</option>
-                                <option>1972</option>
                             </select>
                         </div>
                         <div class="parameter">
                             <span>Periodo</span>
                             <select id="ddlPeriodo" name="periodo">
                                 <option value="3">AGOSTO - OCTUBRE</option>
+                                <option value="2">MAYO - JULIO</option>
+
                             </select>
                         </div>
 
                         <div class="parameter" style="width:250px">
-                            <button  onclick="showReporte()" class="button-square no-border bg-black">Generar
+                            <button onclick="showReporte()" class="button-square no-border bg-black">Generar
                                 Reporte</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="uk-alert uk-alert-success" style="display:none"></div>
             <div id="report-content" style="display: none" class="report-content">
 
                 <div class="report-header-container responsive-block">
@@ -199,142 +496,34 @@
                 </div>
 
                 <div class="clear">
-                    <table class="uk-width-1-1 print-table">
+                    <table id="table" class="uk-width-1-1 print-table">
                         <thead>
                             <tr>
-                                <th class="font-bold-600">Clave</th>
-                                <th class="font-bold-600 uk-text-center">Sec</th>
-                                <th class="font-bold-600">Asignatura</th>
-                                <th class="font-bold-600 uk-text-center">Profesor</th>
-                                <th class="font-bold-600 uk-text-center">CR</th>
-                                <th class="font-bold-600 uk-text-center">Lun</th>
-                                <th class="font-bold-600 uk-text-center">Mar</th>
-                                <th class="font-bold-600 uk-text-center">Mier</th>
-                                <th class="font-bold-600 uk-text-center">Jue</th>
-                                <th class="font-bold-600 uk-text-center">Vier</th>
-                                <th class="font-bold-600 uk-text-center">Sab</th>
-                                <th class="font-bold-600 uk-text-center">Aula</th>
+                                <th class="font-bold-600" data-field="Clave">Clave</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Seccion">Sec</th>
+                                <th class="font-bold-600" data-field="Titulo">Asignatura</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Profesora">Profesor</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Creditos">CR</th>
+                                <th class="font-bold-600 uk-text-center" data-field="LunesH">Lun</th>
+                                <th class="font-bold-600 uk-text-center" data-field="MartesH">Mar</th>
+                                <th class="font-bold-600 uk-text-center" data-field="MiercH">Mier</th>
+                                <th class="font-bold-600 uk-text-center" data-field="JuevH">Jue</th>
+                                <th class="font-bold-600 uk-text-center" data-field="ViernH">Vier</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Sab">Sab</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Letra">Calif.</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Nota">Punt.</th>
+                                <th class="font-bold-600 uk-text-center" data-field="Aula">Aula</th>
                             </tr>
                         </thead>
-                        <tbody>
 
-                            <tr>
-                                <td class="uk-text-center">ASL311</td>
-                                <td class="uk-text-center">02</td>
-                                <td class="">LABORATORIO PATOLOGIA PEDIATRICA INFECCIOSA</td>
-                                <td>DANIA MERCEDES TORRES ALMANZAR</td>
-                                <td class="uk-text-center">4</td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center">8/12</td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center">MV51</td>
-                            </tr>
-                            <tr>
-                                <td class="uk-text-center">ASL315</td>
-                                <td class="uk-text-center">05</td>
-                                <td class="">LABORATORIO PATOLOGIA QUIRURGICA II</td>
-                                <td>VICENTE CALCAÑO UCETA</td>
-
-                                <td class="uk-text-center">4</td>
-                                <td class="uk-text-center">16/18</td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center">16/18 </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center">SBG</td>
-
-                            </tr>
-                            <tr>
-                                <td class="uk-text-center">ASM311</td>
-                                <td class="uk-text-center">02</td>
-                                <td class="">PATOLOGIA PEDIATRICA INFECCIOSA</td>
-                                <td>DANIA MERCEDES TORRES ALMANZAR </td>
-                                <td class="uk-text-center">2</td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center">14/16 </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center">AH408</td>
-
-                            </tr>
-                            <tr>
-                                <td class="uk-text-center">ASM315</td>
-                                <td class="uk-text-center">01</td>
-                                <td class="">PATOLOGIA QUIRURGICA II</td>
-                                <td>JOSE GREGORIO HERNANDEZ GOMEZ</td>
-                                <td class="uk-text-center"> 4</td>
-
-                                <td class="uk-text-center">18/20 </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center">18/20</td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center">AH314, AH414</td>
-
-                            </tr>
-                            <tr>
-                                <td class="uk-text-center">ASM318</td>
-                                <td class="uk-text-center">01</td>
-
-                                <td class="">PATOLOGIA GINECOBSTETRICA</td>
-                                <td>CARLOS JOSE REGALADO CASTELLANO</td>
-
-                                <td class="uk-text-center">2</td>
-                                <td class="uk-text-center">14/16</td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"> </td>
-                                <td class="uk-text-center"></td>
-                                <td class="uk-text-center">AH314, AH414</td>
-
-                            </tr>
-
-                            <tr>
-                                <td colspan="2" class="font-bold-600 uk-text-right">Teorías :</td>
-                                <td>3</td>
-                                <td class="font-bold-600 uk-text-right">Total Créditos :</td>
-                                <td>16</td>
-                                <td colspan="7"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="font-bold-600 uk-text-right">Laboratorios :</td>
-                                <td>2</td>
-                                <td colspan="9"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="font-bold-600 uk-text-right">Total Asignaturas :</td>
-                                <td>5</td>
-                                <td colspan="9"></td>
-                            </tr>
-                        </tbody>
                     </table>
+                    <br>
+                    <br>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <div class="modal-wrapper" style="visibility:hidden">
-        <div id="modal" class="modal">
-            <div class="modal-header"></div>
-            <div class="modal-content"></div>
-            <div class="modal-footer"> </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="./volante_files/ui.js.download"></script>
-    <script src="./volante_files/retiroAsignaturas.js.download"></script>
-    <script type="text/javascript" src="./volante_files/utility.js.download"></script>
-
-    <input type="hidden" id="txtNumero" value="os">
 
 </body>
 
