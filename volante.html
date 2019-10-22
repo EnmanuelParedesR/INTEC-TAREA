@@ -27,106 +27,257 @@
 
         var registroNotas = [
 
-            {
-                periodo: "3",
-                periodoLetra: "AGOSTO - OCTUBRE",
-                materias: [{
-
-                    Clave: "ASL311",
-                    Seccion: "02",
-                    Titulo: "LABORATORIO PATOLOGIA PEDIATRICA INFECCIOSA",
-                    Profesora: "DANIA MERCEDES TORRES ALMANZAR",
-                    Creditos: "4",
-                    LunesH: "",
-                    MartesH: "",
-                    MiercH: "8/12",
-                    JuevH: "",
-                    ViernH: "",
-                    Sab: "",
-                    Aula: "MV51",
-                    Letra: "B+",
-                    Nota: "89"
-                },
-
-                {
-
-                    Clave: "ASL315",
-                    Seccion: "05",
-                    Titulo: "LABORATORIO PATOLOGIA QUIRURGICA II",
-                    Profesora: "VICENTE CALCAÑO UCETA",
-                    Creditos: "4",
-                    LunesH: "16/18",
-                    MartesH: "",
-                    MiercH: "16/18",
-                    JuevH: "",
-                    ViernH: "",
-                    Sab: "",
-                    Aula: "SBG",
-                    Letra: "B+",
-                    Nota: "88"
-                },
-
-                {
-
-                    Clave: "ASM311",
-                    Seccion: "02",
-                    Titulo: "PATOLOGIA PEDIATRICA INFECCIOSA",
-                    Profesora: "DANIA MERCEDES TORRES ALMANZAR",
-                    Creditos: "2",
-                    LunesH: "",
-                    MartesH: "",
-                    MiercH: "14/16",
-                    JuevH: "",
-                    ViernH: "",
-                    Sab: "",
-                    Aula: "AH408",
-                    Letra: "C",
-                    Nota: "72"
-                },
-
-                {
-
-                    Clave: "ASM315",
-                    Seccion: "01",
-                    Titulo: "PATOLOGIA QUIRURGICA II",
-                    Profesora: "JOSE GREGORIO HERNANDEZ GOMEZ",
-                    Creditos: "4",
-                    LunesH: "18/20",
-                    MartesH: "",
-                    MiercH: "",
-                    JuevH: "",
-                    ViernH: "",
-                    Sab: "",
-                    Aula: "AH314, AH414",
-                    Letra: "B+",
-                    Nota: "89"
-                },
-
-                {
-
-                    Clave: "ASM318",
-                    Seccion: "01",
-                    Titulo: "PATOLOGIA GINECOBSTETRICA",
-                    Profesora: "CARLOS JOSE REGALADO CASTELLANO",
-                    Creditos: "2",
-                    LunesH: "14/16",
-                    MartesH: "",
-                    MiercH: "",
-                    JuevH: "",
-                    ViernH: "",
-                    Sab: "",
-                    Aula: "AH314, AH414",
-                    Letra: "A",
-                    Nota: "92"
-                },
+            //
+            // {
+            //     periodo: "1",
+            //     periodoLetra: "FEBRERO - ABRIL",
+            //     materias: [
 
 
-                ]
-            },
+            //         {
 
+            //             Clave: "ASL322",
+            //             Seccion: "06",
+            //             Titulo: "LABORATORIO REUMATOLOGIA",
+            //             Profesora: "JOSE JOAQUIN MARTINEZ ALMONTE ",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "08/12",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "98"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL328",
+            //             Seccion: "02",
+            //             Titulo: "LABORATORIO UROLOGIA",
+            //             Profesora: "SANTO BIENVENIDO SANTANA DE LOS SANTOS ",
+            //             Creditos: "1",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "07/09",
+            //             JuevH: "",
+            //             ViernH: "10/12",
+            //             Sab: "",
+            //             Aula: "PONAC",
+            //             Letra: "A",
+            //             Nota: "97"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL330",
+            //             Seccion: "04",
+            //             Titulo: "LABORATORIO OTORRINOLARINGOLOGIA",
+            //             Profesora: "LISSETE CHEAS BIDO ",
+            //             Creditos: "1",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "10/12",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "97"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL331",
+            //             Seccion: "01",
+            //             Titulo: "LABORATORIO OFTALMOLOGIA",
+            //             Profesora: "ROSA KATHERINE RIVERA GRULLON",
+            //             Creditos: "1",
+            //             LunesH: "10/12",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "INDEN",
+            //             Letra: "A",
+            //             Nota: "100"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL333",
+            //             Seccion: "01",
+            //             Titulo: "LABORATORIO ENDROCRINOLOGIA",
+            //             Profesora: "JANY ELIZABETH MATEO ROSADO",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "14/16",
+            //             MiercH: "",
+            //             JuevH: "14/16",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "91"
+            //         },
+            //         {
+
+            //             Clave: "ASL312",
+            //             Seccion: "09",
+            //             Titulo: "LABORATORIO DE PERINATOLOGIA",
+            //             Profesora: "PEDRO ANTONIO MARTE CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "20/22",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH314",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM324",
+            //             Seccion: "01",
+            //             Titulo: "GASTROENTOLOGIA",
+            //             Profesora: "JULIO EMILIO CAMARENA TRABOUS",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "12/14",
+            //             MiercH: "",
+            //             JuevH: "12/14",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH412",
+            //             Letra: "C+",
+            //             Nota: "75"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM330",
+            //             Seccion: "01",
+            //             Titulo: "OTORRINOLARINGOLOGIA",
+            //             Profesora: "AGUSTO ANTONIO OLIVO DE LA CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "07/09",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH414",
+            //             Letra: "C+",
+            //             Nota: "77"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM328",
+            //             Seccion: "01",
+            //             Titulo: "UROLOGIA",
+            //             Profesora: "CLAUDIO ROBERTO ESPINOSA MARTINEZ",
+            //             Creditos: "3",
+            //             LunesH: "14/16",
+            //             MartesH: "",
+            //             MiercH: "14/16",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: " AH412",
+            //             Letra: "A",
+            //             Nota: "91"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM329",
+            //             Seccion: "01",
+            //             Titulo: "CARDIOLOGIA",
+            //             Profesora: "WILSON RAFAEL JAVIERRE JOSE",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "16/18",
+            //             MiercH: "",
+            //             JuevH: "16/18",
+            //             ViernH: "",
+            //             Sab: "09/11",
+            //             Aula: "AH414",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM312",
+            //             Seccion: "01",
+            //             Titulo: "PERINATOLOGIA",
+            //             Profesora: "PEDRO ANTONIO MARTE CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "14/16",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH314",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         //
+            //         {
+
+            //             Clave: "ASM331",
+            //             Seccion: "01",
+            //             Titulo: "OFTALMOLOGIA",
+            //             Profesora: "ROSA KATHERINE RIVERA GRULLON",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "12/14",
+            //             JuevH: "",
+            //             ViernH: "12/14",
+            //             Sab: "",
+            //             Aula: "AH414",
+            //             Letra: "B+",
+            //             Nota: "86"
+            //         },
+
+            //         {
+
+            //             Clave: "ASM333",
+            //             Seccion: "01",
+            //             Titulo: "ENDROCRINOLOGIA",
+            //             Profesora: "RADYVELKA ALTAGRACIA THEN VANDERHORST",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "07/09",
+            //             Sab: "07/09",
+            //             Aula: "AH414",
+            //             Letra: "B+",
+            //             Nota: "88"
+            //         },
+            //     ]
+            // },
             {
                 periodo: "2",
-                periodoLetra: "ABRIL - JULIO",
+                periodoLetra: "MAYO - JULIO",
                 materias: [
 
 
@@ -368,11 +519,362 @@
                         Aula: "AH414",
                         Letra: "B+",
                         Nota: "88"
-                    },
+                    }
 
                 ]
-            }
+            },
+            {
+                periodo: "3",
+                periodoLetra: "AGOSTO - OCTUBRE",
+                materias: [
+
+                    {
+
+                        Clave: "ASL311",
+                        Seccion: "02",
+                        Titulo: "LABORATORIO PATOLOGIA PEDIATRICA INFECCIOSA",
+                        Profesora: "DANIA MERCEDES TORRES ALMANZAR",
+                        Creditos: "4",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "8/12",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "MV51",
+                        Letra: "B+",
+                        Nota: "89"
+                    },
+
+                    {
+
+                        Clave: "ASL315",
+                        Seccion: "05",
+                        Titulo: "LABORATORIO PATOLOGIA QUIRURGICA II",
+                        Profesora: "VICENTE CALCAÑO UCETA",
+                        Creditos: "4",
+                        LunesH: "16/18",
+                        MartesH: "",
+                        MiercH: "16/18",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "SBG",
+                        Letra: "B+",
+                        Nota: "88"
+                    },
+
+                    {
+
+                        Clave: "ASM311",
+                        Seccion: "02",
+                        Titulo: "PATOLOGIA PEDIATRICA INFECCIOSA",
+                        Profesora: "DANIA MERCEDES TORRES ALMANZAR",
+                        Creditos: "2",
+                        LunesH: "",
+                        MartesH: "",
+                        MiercH: "14/16",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH408",
+                        Letra: "C",
+                        Nota: "72"
+                    },
+
+                    {
+
+                        Clave: "ASM315",
+                        Seccion: "01",
+                        Titulo: "PATOLOGIA QUIRURGICA II",
+                        Profesora: "JOSE GREGORIO HERNANDEZ GOMEZ",
+                        Creditos: "4",
+                        LunesH: "18/20",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH314, AH414",
+                        Letra: "B+",
+                        Nota: "89"
+                    },
+
+                    {
+
+                        Clave: "ASM318",
+                        Seccion: "01",
+                        Titulo: "PATOLOGIA GINECOBSTETRICA",
+                        Profesora: "CARLOS JOSE REGALADO CASTELLANO",
+                        Creditos: "2",
+                        LunesH: "14/16",
+                        MartesH: "",
+                        MiercH: "",
+                        JuevH: "",
+                        ViernH: "",
+                        Sab: "",
+                        Aula: "AH314, AH414",
+                        Letra: "A",
+                        Nota: "92"
+                    },
+
+
+                ]
+            },
+
+          
+
+            //
+            // {
+            //     periodo: "4",
+            //     periodoLetra: "NOVIEMBRE - ENERO",
+            //     materias: [
+
+
+            //         {
+
+            //             Clave: "ASL329",
+            //             Seccion: "02",
+            //             Titulo: "LABORATORIO CARDIOLOGIA",
+            //             Profesora: "JOSE JOAQUIN MARTINEZ ALMONTE ",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "08/12",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "98"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL328",
+            //             Seccion: "02",
+            //             Titulo: "LABORATORIO UROLOGIA",
+            //             Profesora: "SANTO BIENVENIDO SANTANA DE LOS SANTOS ",
+            //             Creditos: "1",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "07/09",
+            //             JuevH: "",
+            //             ViernH: "10/12",
+            //             Sab: "",
+            //             Aula: "PONAC",
+            //             Letra: "A",
+            //             Nota: "97"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL330",
+            //             Seccion: "04",
+            //             Titulo: "LABORATORIO OTORRINOLARINGOLOGIA",
+            //             Profesora: "LISSETE CHEAS BIDO ",
+            //             Creditos: "1",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "10/12",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "97"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL331",
+            //             Seccion: "01",
+            //             Titulo: "LABORATORIO OFTALMOLOGIA",
+            //             Profesora: "ROSA KATHERINE RIVERA GRULLON",
+            //             Creditos: "1",
+            //             LunesH: "10/12",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "INDEN",
+            //             Letra: "A",
+            //             Nota: "100"
+            //         },
+
+            //         {
+
+            //             Clave: "ASL333",
+            //             Seccion: "01",
+            //             Titulo: "LABORATORIO ENDROCRINOLOGIA",
+            //             Profesora: "JANY ELIZABETH MATEO ROSADO",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "14/16",
+            //             MiercH: "",
+            //             JuevH: "14/16",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "SBG1",
+            //             Letra: "A",
+            //             Nota: "91"
+            //         },
+            //         {
+
+            //             Clave: "ASL312",
+            //             Seccion: "09",
+            //             Titulo: "LABORATORIO DE PERINATOLOGIA",
+            //             Profesora: "PEDRO ANTONIO MARTE CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "20/22",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH314",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM324",
+            //             Seccion: "01",
+            //             Titulo: "GASTROENTOLOGIA",
+            //             Profesora: "JULIO EMILIO CAMARENA TRABOUS",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "12/14",
+            //             MiercH: "",
+            //             JuevH: "12/14",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH412",
+            //             Letra: "C+",
+            //             Nota: "75"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM330",
+            //             Seccion: "01",
+            //             Titulo: "OTORRINOLARINGOLOGIA",
+            //             Profesora: "AGUSTO ANTONIO OLIVO DE LA CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "07/09",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH414",
+            //             Letra: "C+",
+            //             Nota: "77"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM328",
+            //             Seccion: "01",
+            //             Titulo: "UROLOGIA",
+            //             Profesora: "CLAUDIO ROBERTO ESPINOSA MARTINEZ",
+            //             Creditos: "3",
+            //             LunesH: "14/16",
+            //             MartesH: "",
+            //             MiercH: "14/16",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: " AH412",
+            //             Letra: "A",
+            //             Nota: "91"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM329",
+            //             Seccion: "01",
+            //             Titulo: "CARDIOLOGIA",
+            //             Profesora: "WILSON RAFAEL JAVIERRE JOSE",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "16/18",
+            //             MiercH: "",
+            //             JuevH: "16/18",
+            //             ViernH: "",
+            //             Sab: "09/11",
+            //             Aula: "AH414",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         {
+
+            //             Clave: "ASM312",
+            //             Seccion: "01",
+            //             Titulo: "PERINATOLOGIA",
+            //             Profesora: "PEDRO ANTONIO MARTE CRUZ",
+            //             Creditos: "2",
+            //             LunesH: "14/16",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "",
+            //             Sab: "",
+            //             Aula: "AH314",
+            //             Letra: "A",
+            //             Nota: "93"
+            //         },
+
+
+            //         //
+            //         {
+
+            //             Clave: "ASM331",
+            //             Seccion: "01",
+            //             Titulo: "OFTALMOLOGIA",
+            //             Profesora: "ROSA KATHERINE RIVERA GRULLON",
+            //             Creditos: "2",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "12/14",
+            //             JuevH: "",
+            //             ViernH: "12/14",
+            //             Sab: "",
+            //             Aula: "AH414",
+            //             Letra: "B+",
+            //             Nota: "86"
+            //         },
+
+            //         {
+
+            //             Clave: "ASM333",
+            //             Seccion: "01",
+            //             Titulo: "ENDROCRINOLOGIA",
+            //             Profesora: "RADYVELKA ALTAGRACIA THEN VANDERHORST",
+            //             Creditos: "3",
+            //             LunesH: "",
+            //             MartesH: "",
+            //             MiercH: "",
+            //             JuevH: "",
+            //             ViernH: "07/09",
+            //             Sab: "07/09",
+            //             Aula: "AH414",
+            //             Letra: "B+",
+            //             Nota: "88"
+            //         },
+            //     ]
+            // }
         ]
+
+
 
         function showReporte() {
 
@@ -419,8 +921,52 @@
                     </li>
                     <li id="opProcesosAcademicos" class="menu-slider" data-submenu="procesos-menu">
                         <a class="uk-icon-edit" href="./volante.html">
+                            <span class="uk-hidden-small">Volante de Selección</span>
+                            <span class="uk-icon-chevron-right uk-float-right"></span>
+                        </a>
+                    </li>
+
+
+
+                    <li id="opProcesosAcademicos" class="menu-slider" data-submenu="procesos-menu">
+                        <a class="uk-icon-edit" href="./calificaciones.html">
                             <span class="uk-hidden-small">Volante de Calificación</span>
                             <span class="uk-icon-chevron-right uk-float-right"></span>
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a id="OpPagosOnline" class="uk-icon-share-square-o">
+                            <span class="uk-hidden-small">Pagos</span>
+                        </a>
+                    </li>
+
+                    <li><a id="opEvaluacion" class="uk-icon-share-square-o"><span class="uk-hidden-small">Evaluación
+                                profesoral</span></a></li>
+
+                    <li id="opReporte" class="menu-slider" data-submenu="report-menu">
+                        <a class="uk-icon-bar-chart-o">
+                            <span class="uk-hidden-small">Reportes</span>
+                            <span class="uk-icon-chevron-right uk-float-right"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="OpConsejeria" class="uk-icon-share-square-o">
+                            <span class="uk-hidden-small">Consejería</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a id="opProgramaAcademico" class="uk-icon-share-square-o">
+                            <span class="uk-hidden-small">Programas de asignaturas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="OpOferta" class="uk-icon-share-square-o">
+                            <span class="uk-hidden-small">Oferta académica</span>
                         </a>
                     </li>
                 </ul>
@@ -459,9 +1005,10 @@
                         <div class="parameter">
                             <span>Periodo</span>
                             <select id="ddlPeriodo" name="periodo">
-                                <option value="3">AGOSTO - OCTUBRE</option>
+                                <option value="1">FEBRERO - ABRIL</option>
                                 <option value="2">MAYO - JULIO</option>
-
+                                <option value="3">AGOSTO - OCTUBRE</option>
+                                <option value="4">NOVIEMBRE - ENERO</option>
                             </select>
                         </div>
 
@@ -499,20 +1046,20 @@
                     <table id="table" class="uk-width-1-1 print-table">
                         <thead>
                             <tr>
-                                <th class="font-bold-600" data-field="Clave">Clave</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Seccion">Sec</th>
-                                <th class="font-bold-600" data-field="Titulo">Asignatura</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Profesora">Profesor</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Creditos">CR</th>
-                                <th class="font-bold-600 uk-text-center" data-field="LunesH">Lun</th>
-                                <th class="font-bold-600 uk-text-center" data-field="MartesH">Mar</th>
-                                <th class="font-bold-600 uk-text-center" data-field="MiercH">Mier</th>
-                                <th class="font-bold-600 uk-text-center" data-field="JuevH">Jue</th>
-                                <th class="font-bold-600 uk-text-center" data-field="ViernH">Vier</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Sab">Sab</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Letra">Calif.</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Nota">Punt.</th>
-                                <th class="font-bold-600 uk-text-center" data-field="Aula">Aula</th>
+                                <th class="" data-field="Clave">Clave</th>
+                                <th class=" uk-text-center" data-field="Seccion">Sec</th>
+                                <th class="" data-field="Titulo">Asignatura</th>
+                                <th class=" uk-text-center" data-field="Profesora">Profesor</th>
+                                <th class=" uk-text-center" data-field="Creditos">CR</th>
+                                <th class=" uk-text-center" data-field="LunesH">Lun</th>
+                                <th class=" uk-text-center" data-field="MartesH">Mar</th>
+                                <th class=" uk-text-center" data-field="MiercH">Mier</th>
+                                <th class=" uk-text-center" data-field="JuevH">Jue</th>
+                                <th class=" uk-text-center" data-field="ViernH">Vier</th>
+                                <th class=" uk-text-center" data-field="Sab">Sab</th>
+                                <th class=" uk-text-center" data-field="Letra">Calif.</th>
+                                <th class=" uk-text-center" data-field="Nota">Punt.</th>
+                                <th class=" uk-text-center" data-field="Aula">Aula</th>
                             </tr>
                         </thead>
 
